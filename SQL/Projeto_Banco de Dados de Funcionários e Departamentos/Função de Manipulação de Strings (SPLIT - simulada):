@@ -1,0 +1,2 @@
+SELECT nome, SUBSTRING_INDEX(nome, ' ', 1) AS primeiro_nome
+FROM funcionarios;
