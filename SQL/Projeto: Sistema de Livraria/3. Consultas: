@@ -1,0 +1,33 @@
+-- a) Exibir livros e seus autores (usando JOIN):
+SELECT l.titulo, a.nome_autor
+FROM livros l
+JOIN autores a ON l.id_autor = a.id_autor;
+
+-- b) Exibir o total de vendas de cada livro (usando SUM e GROUP BY):
+SELECT l.titulo, SUM(v.quantidade) AS total_vendas
+FROM vendas v
+JOIN livros l ON v.id_livro = l.id_livro
+GROUP BY l.titulo;
+
+-- c) Listar os livros que tiveram mais de 40 cópias vendidas (usando HAVING):
+SELECT l.titulo, SUM(v.quantidade) AS total_vendas
+FROM vendas v
+JOIN livros l ON v.id_livro = l.id_livro
+GROUP BY l.titulo
+HAVING SUM(v.quantidade) > 40;
+
+-- d) Exibir as vendas do livro 'A Guerra dos Tronos' (usando WHERE):
+SELECT l.titulo, v.quantidade, v.data_venda
+FROM vendas v
+JOIN livros l ON v.id_livro = l.id_livro
+WHERE l.titulo = 'A Guerra dos Tronos';
+
+-- e) Atualizar o preço de um livro:
+UPDATE livros
+SET preco = 59.90
+WHERE titulo = 'A Guerra dos Tronos';
+
+-- f) Deletar uma venda:
+DELETE FROM vendas
+WHERE id_venda = 3;
+
