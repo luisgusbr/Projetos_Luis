@@ -1,0 +1,8 @@
+-- Encontrar o total de salários pagos por departamento, mas apenas para funcionários que trabalham em "São Paulo".
+
+SELECT d.nome AS departamento, SUM(f.salario) AS total_salarios
+FROM funcionarios f
+INNER JOIN departamentos d ON f.departamento_id = d.id
+WHERE f.cidade = 'São Paulo'
+GROUP BY d.nome;
+
