@@ -1,0 +1,9 @@
+-- Encontrar o funcionário com o maior salário em cada departamento (usando subquery).
+
+SELECT nome, salario, departamento_id
+FROM funcionarios f1
+WHERE salario = (
+    SELECT MAX(salario)
+    FROM funcionarios f2
+    WHERE f1.departamento_id = f2.departamento_id
+);
