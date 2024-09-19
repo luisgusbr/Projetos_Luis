@@ -1,0 +1,6 @@
+Cenário:
+O projeto simula o sistema de uma livraria que contém informações sobre livros, autores e vendas. Você será capaz de:
+
+Criar tabelas para armazenar informações de livros, autores, e vendas.
+Inserir dados fictícios.
+Realizar consultas para verificar quais autores vendem mais livros, quais são os livros mais vendidos, etc.
