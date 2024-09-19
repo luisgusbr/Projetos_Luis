@@ -1,0 +1,26 @@
+-- Tabela autores:
+CREATE TABLE autores (
+    id_autor INT PRIMARY KEY,
+    nome_autor VARCHAR(100),
+    nacionalidade VARCHAR(50)
+);
+
+
+-- Tabela livros:
+CREATE TABLE livros (
+    id_livro INT PRIMARY KEY,
+    titulo VARCHAR(150),
+    ano_publicacao INT,
+    id_autor INT,
+    preco DECIMAL(10, 2),
+    FOREIGN KEY (id_autor) REFERENCES autores(id_autor)
+);
+
+-- Tabela vendas:
+CREATE TABLE vendas (
+    id_venda INT PRIMARY KEY,
+    id_livro INT,
+    quantidade INT,
+    data_venda DATE,
+    FOREIGN KEY (id_livro) REFERENCES livros(id_livro)
+);
