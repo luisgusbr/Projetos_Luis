@@ -1,0 +1,15 @@
+-- Inserir dados na tabela de departamentos
+INSERT INTO departamentos (id, nome)
+VALUES 
+(1, 'Recursos Humanos'),
+(2, 'TI'),
+(3, 'Financeiro');
+
+-- Inserir dados na tabela de funcionários
+INSERT INTO funcionarios (id, nome, salario, departamento_id, cidade)
+VALUES
+(1, 'João', 3000, 2, 'São Paulo'),
+(2, 'Maria', 4000, 1, 'Rio de Janeiro'),
+(3, 'Pedro', 3500, 2, 'São Paulo'),
+(4, 'Ana', 2500, 3, 'Belo Horizonte'),
+(5, 'Lucas', 2000, 1, 'São Paulo');
