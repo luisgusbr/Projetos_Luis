@@ -1,0 +1,5 @@
+-- Encontrar funcionários cujo nome comece com a letra 'M' e substituir 'São Paulo' por 'SP' na coluna de cidade.
+
+SELECT nome, REPLACE(cidade, 'São Paulo', 'SP') AS cidade_formatada
+FROM funcionarios
+WHERE nome LIKE 'M%';
