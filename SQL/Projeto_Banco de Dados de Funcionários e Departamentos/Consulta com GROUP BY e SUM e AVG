@@ -1,0 +1,6 @@
+-- Calcular o salário médio por departamento.
+
+SELECT d.nome AS departamento, AVG(f.salario) AS salario_medio
+FROM funcionarios f
+INNER JOIN departamentos d ON f.departamento_id = d.id
+GROUP BY d.nome;
