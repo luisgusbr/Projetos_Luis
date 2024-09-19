@@ -1,0 +1,5 @@
+-- Obter uma lista de funcionários com o nome de seu departamento (usando INNER JOIN).
+
+SELECT f.nome AS funcionario, f.salario, d.nome AS departamento
+FROM funcionarios f
+INNER JOIN departamentos d ON f.departamento_id = d.id;
