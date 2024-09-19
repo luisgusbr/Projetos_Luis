@@ -1,0 +1,5 @@
+-- Encontrar funcionários que trabalham na cidade de "São Paulo" e têm salário acima de 2500.
+
+SELECT nome, salario, cidade
+FROM funcionarios
+WHERE cidade = 'São Paulo' AND salario > 2500;
